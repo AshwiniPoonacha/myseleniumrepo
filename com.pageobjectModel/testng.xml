@@ -8,7 +8,7 @@
  
  <test name="Test1">
     <classes>
-      <class name="com.crm.qa.TestCases.LoginPageTest"/>
+      <class name="LoginPageTest"/>
 	</classes>
   </test> <!-- Test -->
 

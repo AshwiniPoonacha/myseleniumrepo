@@ -15,6 +15,7 @@
         <methods>
           <include name="setup"/>
           <include name="CRMlogoimgtest"/>
+          <include name="teardown"/>
           <include name="logintest"/>
           <include name="pagetitletest"/>
         </methods>

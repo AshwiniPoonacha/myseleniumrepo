@@ -114,7 +114,7 @@
 				<configuration>
 					<suiteXmlFiles>
 					   
-						<suiteXmlFile>src/main/resources/testng.xml</suiteXmlFile>
+						<suiteXmlFile>testng.xml</suiteXmlFile>
 					
 						<!-- TestNG suite XML files 
 						<suiteXmlFile>src/test/resources/suiteA.xml</suiteXmlFile>

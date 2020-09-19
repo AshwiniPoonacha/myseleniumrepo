@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/0/1</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/3</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Sep 17 15:35:47 IST 2020</td>
+<td>Started on:</td><td>Sat Sep 19 18:52:41 IST 2020</td>
 </tr>
-<tr><td>Total time:</td><td>46 seconds (46523 ms)</td>
+<tr><td>Total time:</td><td>14 seconds (14980 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,34 +75,70 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.crm.qa.TestCases.ContactsPageTest.setup()'><b>setup</b><br>Test class: com.crm.qa.TestCases.ContactsPageTest</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 20.000
+<td title='LoginPageTest.setup()'><b>setup</b><br>Test class: LoginPageTest</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: session not created
+from chrome not reachable
   (Session info: chrome=85.0.4183.102)
 Build info: version: &apos;4.0.0-alpha-5&apos;, revision: &apos;b3a0d621cc&apos;
 System info: host: &apos;LAPTOP-64Q437SJ&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_261&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.102, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: C:\Users\91990\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:52617}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 38f8396829505d0d43315fde6a2b765b
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+	Ordinal0 [0x010187E3+2852835]
+	Ordinal0 [0x00F05BB1+1727409]
+	Ordinal0 [0x00DDE362+516962]
+	Ordinal0 [0x00DD7D82+490882]
+	Ordinal0 [0x00DD846B+492651]
+	Ordinal0 [0x00DD93C5+496581]
+	Ordinal0 [0x00DD4D64+478564]
+	Ordinal0 [0x00DDF300+520960]
+	Ordinal0 [0x00D8E489+189577]
+	Ordinal0 [0x00D8D7FD+186365]
+	Ordinal0 [0x00D8B70B+177931]
+	Ordinal0 [0x00D72584+75140]
+	Ordinal0 [0x00D73650+79440]
+	Ordinal0 [0x00D735E9+79337]
+	Ordinal0 [0x00F1AD5C+1813852]
+	GetHandleVerifier [0x0113C616+1075574]
+	GetHandleVerifier [0x0113C367+1074887]
+	GetHandleVerifier [0x01147497+1120247]
+	GetHandleVerifier [0x0113CC16+1077110]
+	Ordinal0 [0x00F13206+1782278]
+	Ordinal0 [0x00F1C3BB+1819579]
+	Ordinal0 [0x00F1C523+1819939]
+	Ordinal0 [0x00F32B45+1911621]
+	BaseThreadInitThunk [0x773E6359+25]
+	RtlGetAppContainerNamedObjectPath [0x77567C24+228]
+	RtlGetAppContainerNamedObjectPath [0x77567BF4+180]
+
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
 	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$1(ProtocolHandshake.java:126)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
+	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.util.stream.ReferencePipeline.findFirst(Unknown Source)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:139)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:316)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:85)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
-	at com.sun.proxy.$Proxy13.click(Unknown Source)
-	at com.crm.qa.pages.LoginPage.login(LoginPage.java:48)
-	at com.crm.qa.TestCases.ContactsPageTest.setup(ContactsPageTest.java:34)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:216)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:136)
+	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:75)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:163)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:150)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:105)
+	at com.crm.qa.Base.TestBase.initialise(TestBase.java:54)
+	at LoginPageTest.setup(LoginPageTest.java:23)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -129,34 +165,70 @@ Session ID: 38f8396829505d0d43315fde6a2b765b
 	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
-</pre></div><a href='#' onClick='toggleBox("stack-trace2016828666", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2016828666'><pre>org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 20.000
+</pre></div><a href='#' onClick='toggleBox("stack-trace1904288897", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1904288897'><pre>org.openqa.selenium.SessionNotCreatedException: session not created
+from chrome not reachable
   (Session info: chrome=85.0.4183.102)
 Build info: version: &apos;4.0.0-alpha-5&apos;, revision: &apos;b3a0d621cc&apos;
 System info: host: &apos;LAPTOP-64Q437SJ&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_261&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.102, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: C:\Users\91990\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:52617}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 38f8396829505d0d43315fde6a2b765b
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+	Ordinal0 [0x010187E3+2852835]
+	Ordinal0 [0x00F05BB1+1727409]
+	Ordinal0 [0x00DDE362+516962]
+	Ordinal0 [0x00DD7D82+490882]
+	Ordinal0 [0x00DD846B+492651]
+	Ordinal0 [0x00DD93C5+496581]
+	Ordinal0 [0x00DD4D64+478564]
+	Ordinal0 [0x00DDF300+520960]
+	Ordinal0 [0x00D8E489+189577]
+	Ordinal0 [0x00D8D7FD+186365]
+	Ordinal0 [0x00D8B70B+177931]
+	Ordinal0 [0x00D72584+75140]
+	Ordinal0 [0x00D73650+79440]
+	Ordinal0 [0x00D735E9+79337]
+	Ordinal0 [0x00F1AD5C+1813852]
+	GetHandleVerifier [0x0113C616+1075574]
+	GetHandleVerifier [0x0113C367+1074887]
+	GetHandleVerifier [0x01147497+1120247]
+	GetHandleVerifier [0x0113CC16+1077110]
+	Ordinal0 [0x00F13206+1782278]
+	Ordinal0 [0x00F1C3BB+1819579]
+	Ordinal0 [0x00F1C523+1819939]
+	Ordinal0 [0x00F32B45+1911621]
+	BaseThreadInitThunk [0x773E6359+25]
+	RtlGetAppContainerNamedObjectPath [0x77567C24+228]
+	RtlGetAppContainerNamedObjectPath [0x77567BF4+180]
+
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
 	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$1(ProtocolHandshake.java:126)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
+	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.util.stream.ReferencePipeline.findFirst(Unknown Source)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:139)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:316)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:85)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
-	at com.sun.proxy.$Proxy13.click(Unknown Source)
-	at com.crm.qa.pages.LoginPage.login(LoginPage.java:48)
-	at com.crm.qa.TestCases.ContactsPageTest.setup(ContactsPageTest.java:34)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:216)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:136)
+	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:75)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:163)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:150)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:105)
+	at com.crm.qa.Base.TestBase.initialise(TestBase.java:54)
+	at LoginPageTest.setup(LoginPageTest.java:23)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -185,7 +257,7 @@ Session ID: 38f8396829505d0d43315fde6a2b765b
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
 </pre></div></td>
 <td>0</td>
-<td>com.crm.qa.TestCases.ContactsPageTest@783e6358</td></tr>
+<td>LoginPageTest@26ba2a48</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
 <tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
@@ -195,10 +267,30 @@ Session ID: 38f8396829505d0d43315fde6a2b765b
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.crm.qa.TestCases.ContactsPageTest.teardown()'><b>teardown</b><br>Test class: com.crm.qa.TestCases.ContactsPageTest</td>
+<td title='LoginPageTest.setup()'><b>setup</b><br>Test class: LoginPageTest</td>
 <td></td>
 <td>0</td>
-<td>com.crm.qa.TestCases.ContactsPageTest@783e6358</td></tr>
+<td>LoginPageTest@26ba2a48</td></tr>
+<tr>
+<td title='LoginPageTest.setup()'><b>setup</b><br>Test class: LoginPageTest</td>
+<td></td>
+<td>0</td>
+<td>LoginPageTest@26ba2a48</td></tr>
+<tr>
+<td title='LoginPageTest.teardown()'><b>teardown</b><br>Test class: LoginPageTest</td>
+<td></td>
+<td>0</td>
+<td>LoginPageTest@26ba2a48</td></tr>
+<tr>
+<td title='LoginPageTest.teardown()'><b>teardown</b><br>Test class: LoginPageTest</td>
+<td></td>
+<td>0</td>
+<td>LoginPageTest@26ba2a48</td></tr>
+<tr>
+<td title='LoginPageTest.teardown()'><b>teardown</b><br>Test class: LoginPageTest</td>
+<td></td>
+<td>0</td>
+<td>LoginPageTest@26ba2a48</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
 <tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
@@ -208,10 +300,20 @@ Session ID: 38f8396829505d0d43315fde6a2b765b
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.crm.qa.TestCases.ContactsPageTest.checkanycontactsCheckboxTest()'><b>checkanycontactsCheckboxTest</b><br>Test class: com.crm.qa.TestCases.ContactsPageTest</td>
+<td title='LoginPageTest.CRMlogoimgtest()'><b>CRMlogoimgtest</b><br>Test class: LoginPageTest</td>
 <td></td>
 <td>0</td>
-<td>com.crm.qa.TestCases.ContactsPageTest@783e6358</td></tr>
+<td>LoginPageTest@26ba2a48</td></tr>
+<tr>
+<td title='LoginPageTest.logintest()'><b>logintest</b><br>Test class: LoginPageTest</td>
+<td></td>
+<td>0</td>
+<td>LoginPageTest@26ba2a48</td></tr>
+<tr>
+<td title='LoginPageTest.pagetitletest()'><b>pagetitletest</b><br>Test class: LoginPageTest</td>
+<td></td>
+<td>0</td>
+<td>LoginPageTest@26ba2a48</td></tr>
 </table><p>
 </body>
 </html>

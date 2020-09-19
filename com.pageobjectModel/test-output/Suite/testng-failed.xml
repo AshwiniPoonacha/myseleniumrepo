@@ -6,20 +6,19 @@
   </listeners>
   <test name="Test1">
     <classes>
-      <class name="com.crm.qa.TestCases.LoginPageTest"/>
+      <class name="LoginPageTest"/>
     </classes>
   </test> <!-- Test1 -->
   <test name="Test1(failed)">
     <classes>
-      <class name="com.crm.qa.TestCases.LoginPageTest">
+      <class name="LoginPageTest">
         <methods>
           <include name="setup"/>
           <include name="CRMlogoimgtest"/>
-          <include name="teardown"/>
           <include name="logintest"/>
           <include name="pagetitletest"/>
         </methods>
-      </class> <!-- com.crm.qa.TestCases.LoginPageTest -->
+      </class> <!-- LoginPageTest -->
     </classes>
   </test> <!-- Test1(failed) -->
 </suite> <!-- Failed suite [Suite] -->

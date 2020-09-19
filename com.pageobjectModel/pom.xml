@@ -112,6 +112,7 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				        <version>3.0.0-M4</version>
 				<configuration>
+				<useSystemClassLoader>false</useSystemClassLoader>
 					<suiteXmlFiles>
 					   
 						<suiteXmlFile>testng.xml</suiteXmlFile>
@@ -126,7 +127,7 @@
 			            <property>
 			                <name>suitethreadpoolsize</name>
 			                <value>1</value>
-			            </property>
+			            </property>	
         			</properties>
 				</configuration>
 			</plugin>

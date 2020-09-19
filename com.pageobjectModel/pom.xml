@@ -113,6 +113,7 @@
 				        <version>3.0.0-M4</version>
 				<configuration>
 				<useSystemClassLoader>false</useSystemClassLoader>
+				<forkCount>number of test classes</forkCount>
 					<suiteXmlFiles>
 					   
 						<suiteXmlFile>testng.xml</suiteXmlFile>

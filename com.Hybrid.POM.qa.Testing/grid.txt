@@ -1,0 +1,20 @@
+Selenium 3 Hub setup->
+java -jar selenium-server-standalone-3.141.59.jar -port 4455 -role hub
+
+java -jar selenium-server-standalone-3.141.59.jar -role node -hub http://192.168.0.105:4444/grid/register -port 5555
+
+
+
+Worked for me::
+java -jar selenium-server-standalone-3.141.59.jar -port 4546 -role hub
+java -jar selenium-server-standalone-3.141.59.jar -role hub
+
+java -Dwebdriver.chrome.driver="C:\chromedriver.exe" -jar selenium-server-standalone-3.141.59.jar -role webdriver -hub http://192.168.0.105:4546/grid/register
+java -Dwebdriver.chrome.driver="C:\chromedriver.exe" -jar selenium-server-standalone-3.141.59.jar -role node -hub http://192.168.0.105:4444/grid/register
+
+Selenium 4
+
+java -jar selenium-server-4.0.0-alpha-6.jar hub
+java -jar selenium-server-4.0.0-alpha-6.jar node 
+java -jar selenium-server-4.0.0-alpha-6.jar node --port 5556
+java -jar selenium-server-4.0.0-alpha-6.jar node --port 5557
